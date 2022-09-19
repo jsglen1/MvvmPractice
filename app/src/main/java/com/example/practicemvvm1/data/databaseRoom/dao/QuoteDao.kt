@@ -1,9 +1,6 @@
 package com.example.practicemvvm1.data.databaseRoom.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.practicemvvm1.data.databaseRoom.entities.QuoteEntity
 
 @Dao
@@ -15,4 +12,6 @@ interface QuoteDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insetAll(quotes:List<QuoteEntity>)
 
+    @Query("DELETE FROM quote_table ")
+    suspend fun deleteAllQuotes()
 }
