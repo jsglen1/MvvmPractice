@@ -1,7 +1,6 @@
 package com.example.practicemvvm1.domain
 
 import com.example.practicemvvm1.data.QuoteRepository
-import com.example.practicemvvm1.data.model.QuoteModel
 import com.example.practicemvvm1.domain.model.Quote
 import javax.inject.Inject
 
